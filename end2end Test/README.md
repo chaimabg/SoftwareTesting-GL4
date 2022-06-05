@@ -15,6 +15,7 @@ I used the  [ Cypress](https://www.cypress.io/) framework version 10.0.2 to crea
  * Sign in 
  * Consult the employee dashboard
  * Consult an employee working hours
+ * Logout
 
 ## Result 
 
