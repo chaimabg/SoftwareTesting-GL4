@@ -1,16 +1,17 @@
 var express = require('express');
 var router = express.Router();
-var {getUsers , getUserById, addUser , deleteUser} = require( "../services/user-service");
+var {getUsers , addUser , deleteUser, getUserByIdent} = require( "../services/user-service");
 
 /* GET users listing. */
 router.get('/', getUsers);
 
 /* GET user by ID. */
-router.get('/:id', getUserById);
+router.get('/get-user/:ident', getUserByIdent);
 
 /* Post user. */
 router.post('/', addUser);
 
 /* delete user. */
-router.delete('/:id',deleteUser);
+router.delete('/:ident',deleteUser);
+
 module.exports = router;

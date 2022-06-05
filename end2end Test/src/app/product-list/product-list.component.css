@@ -1,0 +1,25 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+tr {
+  border-bottom: 1px solid #EBEDF3;
+
+}
+th {
+  color: #B5B5C3;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  padding-bottom: 5px;
+  text-align: center;
+}
+td{
+  font-size: 1rem;
+  padding: 5px;
+  text-align: center;
+}

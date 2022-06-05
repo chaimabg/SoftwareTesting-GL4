@@ -1,0 +1,76 @@
+<div class="container-fluid">
+
+  <div class="card-header flex-wrap border-0 pt-6 pb-0"><!--Begin::Row-->
+    <div class="card-title">
+      <h3 class="card-label">Working Hours per year
+        <span class="d-block text-muted pt-2 font-size-sm">Worker management</span></h3>
+    </div>
+    <div class="container-fluid">
+      <div class="card card-custom">
+        <div class="card-body p-0">
+          <!--begin: Wizard-->
+          <div class="wizard wizard-2" id="kt_wizard_v2" data-wizard-state="step-first" data-wizard-clickable="false">
+            <!--begin: Wizard Body-->
+            <div class="wizard-body py-8 px-8 py-lg-20 px-lg-10">
+              <!--begin: Wizard Form-->
+              <div class="row">
+                <div class="offset-xxl-2 col-xxl-8">
+                  <form class="form" id="kt_form" (ngSubmit)="onSubmit()" [formGroup]="productForm">
+                    <!--begin: Wizard Step 1-->
+                    <div class="pb-5" data-wizard-type="step-content" data-wizard-state="current">
+                      <!--begin::Input-->
+                      <div class="row">
+                      <div class="form-group col-lg-6">
+                        <label>Store</label>
+                        <select name="pets" id="pet-select" class="form-control form-control-solid form-control-lg" formControlName="year">
+                          <option value="">--Please choose the year--</option>
+                          <option *ngFor="let year of years" [value]="year" [id]="year">{{year}}</option>
+
+                        </select>
+
+                      </div>
+                      <!--end::Input-->
+
+
+                      <!--begin::Input-->
+                      <div class="form-group col-lg-6">
+                        <label>Password</label>
+                        <input type="password" class="form-control form-control-solid form-control-lg" formControlName="password"
+                               id="password"
+                               placeholder="Your password"/>
+                        <span class="form-text text-muted">Please enter your password.</span>
+                      </div>
+                      <!--end::Input-->
+                      </div>
+                      <button type="submit" class="btn btn-light-primary font-weight-bold btn-sm px-5 font-size-base ml-2">Show results</button>
+                      <!--end::Input-->
+                    </div>
+
+
+                    <!--end: Wizard Step 1-->
+
+                  </form>
+                </div>
+              </div>
+              <div class="chart-wrapper" [hidden]="hidden">
+                <canvas baseChart
+                        [datasets]="barChartData"
+                        [labels]="barChartLabels"
+                        [options]="barChartOptions"
+                        [plugins]="barChartPlugins"
+                        [legend]="barChartLegend"
+                >
+                </canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    </div>
+  </div>
+</div>
+
+

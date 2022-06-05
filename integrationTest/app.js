@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var authRouter = require('./routes/auth');
 var cors = require("cors");
 var mongoose = require('mongoose');
 
@@ -23,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/auth', authRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -41,11 +43,10 @@ app.use(function(err, req, res, next) {
 
 const PORT = process.env.PORT || 8080;
 
-mongoose.connect(process.env.CONNECTION_URL, {
+mongoose.connect('mongodb+srv://admin:admin@cluster0.fszg5.mongodb.net/?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-})
-    .then(() => app.listen(PORT, console.log(`Sever running on port ${PORT}`)))
+}).then(() => app.listen(PORT, console.log(`Sever running on port ${PORT}`)))
     .catch((error) => console.log(error.message));
 
 module.exports = app;

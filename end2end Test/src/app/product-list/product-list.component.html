@@ -1,0 +1,17 @@
+<table class="tab-content">
+  <tr >
+    <th *ngFor="let header of headers">
+      {{header}}
+    </th>
+  </tr>
+
+  <tr *ngFor="let user of users">
+    <td>{{user.identifier}}</td>
+    <td>{{user.firstName}}</td>
+    <td>{{user.lastName}}</td>
+    <td>{{user.emailAddress}}</td>
+    <td><a routerLink="/timesheet" class="btn btn-light-primary font-weight-bold btn-sm px-4 font-size-base ml-2" [id]="user.identifier">Time Sheet</a>
+    <a routerLink="/timesheet" class="btn btn-light-primary font-weight-bold btn-sm px-4 font-size-base ml-2">Edit</a></td>
+  </tr>
+
+</table>
