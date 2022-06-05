@@ -8,7 +8,7 @@ This project was generated with
  * Backend : [NodeJs/ExpressJs](https://nodejs.org/en/) version 16.14.2.
 
 ## Test
-we used the  [ Cypress](https://www.cypress.io/) framework version 10.0.2 to create end-to-end tests.
+I used the  [ Cypress](https://www.cypress.io/) framework version 10.0.2 to create end-to-end tests.
 
 ## Use cases tested 
  * Create an account
@@ -18,5 +18,5 @@ we used the  [ Cypress](https://www.cypress.io/) framework version 10.0.2 to cre
 
 ## Result 
 
-![alt text](end2endTest.gif)
+![alt text](./end2endTest.gif)
 
